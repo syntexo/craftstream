@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CraftStream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body{font-family:'Poppins',sans-serif;background-color:#f4f4f5;color:#333;visibility:hidden;opacity:0;transition:opacity .3s ease-in}body.loaded{visibility:visible;opacity:1}h1,h2,h3{font-family:'Playfair Display',serif}#main-header{background-color:transparent;transition:all .4s ease-in-out}#main-header.scrolled{background-color:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 4px 6px -1px #0000001a}#main-header.scrolled .nav-link,#main-header.scrolled #logo-text,#main-header.scrolled #mobile-menu-toggle{color:#374151}#main-header.scrolled #logo-text{color:#818cf8}#main-header.scrolled .nav-link:hover{color:#f97316}
+    </style>
+</head>
+<body>
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ease-in-out scrolled">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-3">
+                <div class="logo"><a href="index.html" class="flex items-center space-x-4"><img src="images/logo.jpg" alt="CraftStream Logo" class="h-20 w-auto"><span id="logo-text" class="text-4xl font-bold font-[PlayfairDisplay] text-gray-800 transition-colors">CraftStream</span></a></div>
+                <nav class="hidden md:flex items-center space-x-8"><a href="index.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">Home</a><a href="blog.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">Blog</a><a href="shop.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">Shop</a><a href="about.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">About Us</a><a href="contact.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">Contact</a></nav>
+                <div class="md:hidden"><button id="mobile-menu-toggle" class="text-gray-800 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
+            </div>
+        </div>
+    </header>
+    <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[990] invisible opacity-0 transition-opacity duration-300">
+        <div id="mobile-nav-content" class="fixed top-0 right-0 h-full w-72 bg-white p-6 shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
+            <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-600 text-3xl">&times;</button>
+            <nav class="flex flex-col space-y-6 mt-20"><a href="index.html" class="text-lg text-gray-800 hover:text-orange-500">Home</a><a href="blog.html" class="text-lg text-gray-800 hover:text-orange-500">Blog</a><a href="shop.html" class="text-lg text-gray-800 hover:text-orange-500">Shop</a><a href="about.html" class="text-lg text-gray-800 hover:text-orange-500">About Us</a><a href="contact.html" class="text-lg text-gray-800 hover:text-orange-500">Contact</a></nav>
+        </div>
+    </div>
+    <main class="pt-32 bg-white">
+        <div class="container mx-auto p-8">
+            <h1 class="text-5xl font-bold text-center mb-4 text-gray-800">About CraftStream</h1>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">A space dedicated to the joy of creation, bringing ideas to life through passion and artistry.</p>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold text-gray-800">Our Story</h2>
+                    <p class="text-gray-700 leading-relaxed text-lg">Welcome to CraftStream, my personal corner of the internet where creativity flows. This began as a simple idea: to build a platform for sharing beautiful, handcrafted ideas and inspiration. From digital art to DIY projects, my goal is to create a hub for fellow makers and enthusiasts.</p>
+                    <p class="text-gray-700 leading-relaxed text-lg">Everything you see here is fueled by a passion for design and the rewarding process of making things by hand. I believe that creativity is a journey, and CraftStream is my way of sharing that journey with you. Thank you for being a part of it!</p>
+                </div>
+                <div class="rounded-xl shadow-2xl overflow-hidden"><img src="images/hero/hero1.jpg" alt="A colorful crafting palette" class="w-full h-auto"></div>
+            </div>
+        </div>
+    </main>
+    <footer id="main-footer" class="bg-gray-800 text-gray-300 pt-12 pb-8 mt-16">
+        <div class="container mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"><div class="footer-section"><h3 class="text-xl font-semibold text-white mb-4">CraftStream</h3><p class="text-base leading-relaxed mb-4">Your ultimate resource for creative inspiration, practical tips, and quality crafting supplies.</p><div class="social-icons flex space-x-4"><a href="https://www.pinterest.com/CraftStream6/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white" aria-label="Pinterest"><i class="fab fa-pinterest-p fa-lg"></i></a></div></div><div class="footer-section"><h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3><ul class="space-y-3 text-base"><li><a href="index.html" class="hover:text-white transition-colors">Home</a></li><li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li><li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li><li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li><li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li></ul></div><div class="footer-section"><h3 class="text-lg font-semibold text-white mb-4">Legal</h3><ul class="space-y-3 text-base"><li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li><li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li></ul></div><div class="footer-section"><h3 class="text-lg font-semibold text-white mb-4">Get In Touch</h3><address class="text-base not-italic"><p class="mt-2"><i class="fas fa-envelope mr-2"></i><a href="mailto:hicocarexoular@gmail.com" class="hover:text-white">hicocarexoular@gmail.com</a></p></address></div></div><div class="footer-bottom text-center border-t border-gray-700 pt-8"><p class="text-base">&copy; <span id="current-year"></span> CraftStream. All rights reserved.</p></div></div>
+    </footer>
+    <script>
+        (function() { 'use strict';
+            document.addEventListener('DOMContentLoaded', () => new WebsiteApp());
+            window.addEventListener('load', () => { setTimeout(() => { document.body.classList.add('loaded'); }, 100); });
+            class WebsiteApp { constructor() { this.initializeComponents(); } initializeComponents() { new HeaderScrollBehavior(); new MobileNavigation(); new CurrentYearUpdater(); } }
+            class HeaderScrollBehavior { constructor() { this.header = document.getElementById('main-header'); if (!this.header) return; window.addEventListener('scroll', () => this.header.classList.toggle('scrolled', window.scrollY > 50), { passive: true }); this.header.classList.toggle('scrolled', window.scrollY > 50); } }
+            class MobileNavigation { constructor() { this.toggleButton = document.getElementById('mobile-menu-toggle'); this.overlay = document.getElementById('mobile-nav-overlay'); if (!this.toggleButton || !this.overlay) return; this.navContent = document.getElementById('mobile-nav-content'); this.closeButton = document.getElementById('mobile-menu-close'); this.isOpen = false; this.init(); } init() { this.toggleButton.addEventListener('click', () => this.open()); if (this.closeButton) this.closeButton.addEventListener('click', () => this.close()); this.overlay.addEventListener('click', (e) => { if (e.target === this.overlay) this.close(); }); document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && this.isOpen) this.close(); }); } open() { if (this.isOpen) return; this.isOpen = true; document.body.style.overflow = 'hidden'; this.overlay.classList.remove('invisible', 'opacity-0'); if (this.navContent) this.navContent.classList.remove('translate-x-full'); } close() { if (!this.isOpen) return; this.isOpen = false; document.body.style.overflow = ''; this.overlay.classList.add('opacity-0'); if (this.navContent) this.navContent.classList.add('translate-x-full'); setTimeout(() => this.overlay.classList.add('invisible'), 300); } }
+            class CurrentYearUpdater { constructor() { const yearSpan = document.getElementById('current-year'); if (yearSpan) yearSpan.textContent = new Date().getFullYear(); } }
+        })();
+    </script>
+</body>
+</html>
