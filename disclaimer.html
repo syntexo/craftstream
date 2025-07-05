@@ -3,52 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disclaimer - CraftStream</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CraftStream</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>body{font-family:'Poppins',sans-serif;background-color:#f4f4f5;color:#333;visibility:hidden;opacity:0;transition:opacity .3s ease-in}body.loaded{visibility:visible;opacity:1}h1,h2,h3{font-family:'Playfair Display',serif}#main-header{background-color:transparent;transition:all .4s ease-in-out}#main-header.scrolled{background-color:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 4px 6px -1px #0000001a}#main-header.scrolled .nav-link,#main-header.scrolled #logo-text,#main-header.scrolled #mobile-menu-toggle{color:#374151}#main-header.scrolled #logo-text{color:#818cf8}#main-header.scrolled .nav-link:hover{color:#f97316}</style>
 </head>
-<body>
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ease-in-out scrolled">
+<body class="bg-gray-100">
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ease-in-out">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-3">
-                <div class="logo"><a href="index.html" class="flex items-center space-x-4"><img src="images/logo.jpg" alt="CraftStream Logo" class="h-20 w-auto"><span id="logo-text" class="text-4xl font-bold font-[PlayfairDisplay] text-gray-800 transition-colors">CraftStream</span></a></div>
-                <nav class="hidden md:flex items-center space-x-8"><a href="index.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">Home</a><a href="blog.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">Blog</a><a href="shop.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">Shop</a><a href="about.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">About Us</a><a href="contact.html" class="nav-link text-gray-600 hover:text-orange-500 font-semibold transition-colors">Contact</a></nav>
-                <div class="md:hidden"><button id="mobile-menu-toggle" class="text-gray-800 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
+                <div class="logo">
+                    <a href="index.html" class="flex items-center space-x-4">
+                        <img src="images/logo.jpg" alt="CraftStream Logo" class="h-20 w-auto">
+                        <span id="logo-text" class="text-4xl font-bold font-[PlayfairDisplay] text-white hover:text-gray-200 transition-colors">CraftStream</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-yellow-300 font-semibold transition-colors">Home</a>
+                    <a href="blog.html" class="nav-link text-white hover:text-yellow-300 font-semibold transition-colors">Blog</a>
+                    <a href="shop.html" class="nav-link text-white hover:text-yellow-300 font-semibold transition-colors">Shop</a>
+                    <a href="about.html" class="nav-link text-white hover:text-yellow-300 font-semibold transition-colors">About Us</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-yellow-300 font-semibold transition-colors">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
             </div>
         </div>
     </header>
-    <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[990] invisible opacity-0 transition-opacity duration-300">
-        <div id="mobile-nav-content" class="fixed top-0 right-0 h-full w-72 bg-white p-6 shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
-            <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-600 text-3xl">&times;</button>
-            <nav class="flex flex-col space-y-6 mt-20"><a href="index.html" class="text-lg text-gray-800 hover:text-orange-500">Home</a><a href="blog.html" class="text-lg text-gray-800 hover:text-orange-500">Blog</a><a href="shop.html" class="text-lg text-gray-800 hover:text-orange-500">Shop</a><a href="about.html" class="text-lg text-gray-800 hover:text-orange-500">About Us</a><a href="contact.html" class="text-lg text-gray-800 hover:text-orange-500">Contact</a></nav>
+    <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[990] invisible opacity-0 transition-opacity">
+        <div id="mobile-nav-content" class="fixed top-0 right-0 h-full w-72 bg-white p-6 shadow-xl transform translate-x-full transition-transform">
+            <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-600 text-2xl">&times;</button>
+            <nav class="flex flex-col space-y-5 mt-16">
+                <a href="index.html" class="text-lg text-gray-700">Home</a>
+                <a href="blog.html" class="text-lg text-gray-700">Blog</a>
+                <a href="shop.html" class="text-lg text-gray-700">Shop</a>
+                <a href="about.html" class="text-lg text-gray-700">About Us</a>
+                <a href="contact.html" class="text-lg text-gray-700">Contact</a>
+            </nav>
         </div>
     </div>
-    <main class="pt-32 bg-white">
-        <div class="container mx-auto p-8 max-w-4xl">
-            <h1 class="text-5xl font-bold text-center mb-12 text-gray-800">Disclaimer</h1>
-            <div class="space-y-6 text-gray-700 leading-relaxed bg-gray-50 p-8 rounded-lg">
-                <p>The information provided by CraftStream on our website is for general informational purposes only. All information on the site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.</p>
-                <h2 class="text-2xl font-bold pt-4">Affiliate Disclaimer</h2>
-                <p>This site may contain links to affiliate websites, and we receive an affiliate commission for any purchases made by you on the affiliate website using such links. This helps support our work and allows us to continue creating helpful content for you.</p>
-                <h2 class="text-2xl font-bold pt-4">External Links Disclaimer</h2>
-                <p>The site may contain links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy by us.</p>
+    <main>
+<section class="py-12 md:py-20 bg-craft-bg dark:bg-neutral-900">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 md:p-12 animate-on-scroll fade-in-up">
+            <h1 class="text-4xl md:text-5xl font-bold font-[PlayfairDisplay] text-center mb-8 text-craft-text dark:text-white">
+                Website <span class="text-craft-primary">Disclaimer</span>
+            </h1>
+            
+            <div class="mb-8 text-craft-text-light dark:text-neutral-400 text-center">
+                <p class="text-lg">Last updated: <span class="font-semibold">May 28, 2025</span></p>
+            </div>
+
+            <div class="bg-craft-accent/10 border border-craft-accent/30 rounded-lg p-6 mb-12 text-center animate-on-scroll fade-in-up">
+                <div class="flex flex-col sm:flex-row items-center space-x-3 text-craft-accent">
+                    <i class="fas fa-exclamation-triangle text-3xl sm:text-2xl mb-3 sm:mb-0 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold font-[PlayfairDisplay] mb-2 text-craft-accent">Important Notice</h3>
+                        <p class="text-sm text-craft-text-light dark:text-neutral-300">
+                            The information provided on this website is for general informational purposes only. 
+                            Please read this disclaimer carefully before using our services or relying on any information provided.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prose max-w-none text-craft-text-light dark:text-neutral-300 leading-relaxed">
+                <p class="mb-4">The information provided by CraftStream on this website is for general informational purposes only. While we strive to ensure all information is provided in good faith, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.</p>
+
+                <p class="mb-4">Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site.</p>
+                
+                <section class="mb-10 mt-8">
+                    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">General Information Disclaimer</h2>
+                    <p class="mb-4">The information on this website is provided on an "as is" basis. To the fullest extent permitted by law, this Company excludes all representations, warranties, obligations, and liabilities arising out of or in connection with this website and its contents or which is or may be provided by any affiliates, partners, agents, or third parties.</p>
+                    <p class="mb-4">The information and materials contained on this website are not intended to constitute a comprehensive guide concerning all aspects of the therapy, product, or treatment described on the website. All users are urged to always seek advice from a registered healthcare professional for diagnosis and answers to their medical questions and to ascertain whether the particular therapy, service, product, or treatment described on the website is suitable in their circumstances.</p>
+                    <p>This Company does not recommend or endorse any specific tests, physicians, procedures, opinions, or other information that may be mentioned on this website. Reliance on any information appearing on this website is strictly at your own risk.</p>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">Professional Advice Disclaimer</h2>
+                    <p class="mb-4">The site cannot and does not contain professional advice. The professional information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals.</p>
+                    <p class="mb-4">We shall not be held liable for any loss, claim, damage, or inconvenience caused as a result of any information within these pages or any information accessed through this site. Any reliance you place on such information is strictly at your own risk.</p>
+                    <p>The use or reliance of any information contained on this site is solely at your own risk. For professional advice specific to your situation, please consult with qualified professionals in the relevant field.</p>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">Accuracy and Completeness</h2>
+                    <p class="mb-4">While we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose.</p>
+                    <p class="mb-4">The information on this website may contain inaccuracies or typographical errors. The information may be updated from time to time and may at times be out of date. We make no commitment to update such materials, and you should not rely on the information as current or accurate.</p>
+                    <p>We reserve the right to change or update information and to correct errors, inaccuracies, or omissions at any time without prior notice. We encourage you to verify any information obtained from this website with other sources.</p>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">External Links Disclaimer</h2>
+                    <p class="mb-4">The Site may contain (or you may be sent through the Site) links to other websites or content belonging to or originating from third parties or links to websites and features in banners or other advertising. We do not investigate, monitor, or check such external links for accuracy, adequacy, validity, reliability, availability, or completeness.</p>
+                    <p class="mb-4">Please note that the Company does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.</p>
+                    <p class="mb-4">We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them. We cannot guarantee that these links will work all the time and we have no control over the availability of the linked pages.</p>
+                    <p>You acknowledge and agree that when you access other websites on the Internet, you do so at your own risk. These external sites may have their own terms of use and privacy policy, and you should review these policies before using those sites.</p>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">Affiliate Disclaimer</h2>
+                    <p class="mb-4">This website contains affiliate links, and we may earn a commission from purchases made through these links.</p>
+                    <p>This means that when you click on certain links on our site and make a purchase, we may receive a small commission from the retailer, at no extra cost to you. This helps support our work and allows us to continue providing valuable content and resources.</p>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">Limitation of Liability</h2>
+                    <p class="mb-4">In no event shall the Company, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, punitive, consequential, or similar damages whatsoever (including, without limitation, damages for loss of data, information, revenue, profit, or business interruption) arising out of the use or inability to use the materials on this site.</p>
+                    <p class="mb-4">This limitation applies whether the alleged liability is based on contract, tort, negligence, strict liability, or any other basis, even if the Company has been advised of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</p>
+                    <p>The Company's total liability to you for all damages, losses, and causes of action (whether in contract, tort, or otherwise) shall not exceed the amount paid by you, if any, for accessing this website or using our services.</p>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">Views and Opinions Disclaimer</h2>
+                    <p class="mb-4">The views and opinions expressed on this website are purely those of the authors and do not necessarily reflect the official policy or position of the Company. Authors of articles and other content are responsible for their own opinions and may not represent the views of the Company.</p>
+                    <p class="mb-4">Any views or opinions represented in this website are personal and belong solely to the website owner and do not represent those of people, institutions, or organizations that the owner may or may not be associated with in professional or personal capacity, unless explicitly stated.</p>
+                    <p>Comments published by users are their sole responsibility and the users will take full responsibility, liability, and blame for any libel or litigation that results from something written in or as a direct result of something written in a comment.</p>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">No Warranties</h2>
+                    <p class="mb-4">This website is provided "as is" without any representations or warranties, express or implied. The Company makes no representations or warranties in relation to this website or the information and materials provided on this website.</p>
+                    <p class="mb-4">Without prejudice to the generality of the foregoing paragraph, the Company does not warrant that this website will be constantly available, or available at all, or that the information on this website is complete, true, accurate, or non-misleading.</p>
+                    <p>Nothing on this website constitutes, or is meant to constitute, advice of any kind. If you require advice in relation to any legal, financial, or medical matter, you should consult an appropriate professional.</p>
+                </section>
+
+                <section class="mb-10">
+                    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">Changes to This Disclaimer</h2>
+                    <p class="mb-4">We reserve the right to modify this disclaimer at any time. Changes and clarifications will take effect immediately upon their posting on the website. If we make material changes to this disclaimer, we will notify you here that it has been updated, so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we use and/or disclose it.</p>
+                    <p>We encourage you to frequently check this page for any changes to stay informed about how we are helping to protect the information we collect. You acknowledge and agree that it is your responsibility to review this disclaimer periodically and become aware of modifications.</p>
+                </section>
+
+        <section class="mb-8">
+    <h2 class="text-2xl md:text-3xl font-semibold font-[PlayfairDisplay] text-craft-text dark:text-white mb-4 border-b border-craft-border/50 pb-2">Contact Information</h2>
+    <p class="mb-4">If you have any questions about this disclaimer, the practices of this site, or your dealings with this website, please contact us at:</p>
+    <div class="bg-gray-100 dark:bg-neutral-900 p-6 rounded-lg text-craft-text-light dark:text-neutral-300">
+        <p class="mb-2"><strong>Email:</strong> <a href="mailto:hicocarexoular@gmail.com" class="hover:underline">hicocarexoular@gmail.com</a></p>
+        <p class="mb-2"><strong>WhatsApp:</strong> <a href="https://wa.me/94702562681" target="_blank" class="hover:underline">+94 70 256 2681</a></p>
+        <p><strong>Address:</strong> 15205 North Kierland Blvd. Suite 100, Scottsdale, AZ 85254, USA</p>
+    </div>
+</section>
+</main>
+    <footer class="bg-gray-800 text-gray-300 pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div class="footer-section">
+                    <h3 class="text-xl font-semibold text-white mb-4">CraftStream</h3>
+                    <p class="text-sm leading-relaxed mb-4">Your ultimate resource for creative inspiration, practical tips, and quality crafting supplies.</p>
+                    <div class="social-icons flex space-x-4">
+                        <a href="https://www.pinterest.com/CraftStream6/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white" aria-label="Pinterest"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="text-lg font-semibold text-white mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="text-lg font-semibold text-white mb-4">Get In Touch</h3>
+                    <address class="text-sm not-italic">
+                        <p class="mt-2"><i class="fas fa-envelope mr-2"></i><a href="mailto:hicocarexoular@gmail.com" class="hover:text-white">hicocarexoular@gmail.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom text-center border-t border-gray-700 pt-8">
+                <p class="text-sm">&copy; <span id="current-year"></span> CraftStream. All rights reserved.</p>
             </div>
         </div>
-    </main>
-    <footer id="main-footer" class="bg-gray-800 text-gray-300 pt-12 pb-8 mt-16">
-        <div class="container mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"><div class="footer-section"><h3 class="text-xl font-semibold text-white mb-4">CraftStream</h3><p class="text-base leading-relaxed mb-4">Your ultimate resource for creative inspiration, practical tips, and quality crafting supplies.</p><div class="social-icons flex space-x-4"><a href="https://www.pinterest.com/CraftStream6/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white" aria-label="Pinterest"><i class="fab fa-pinterest-p fa-lg"></i></a></div></div><div class="footer-section"><h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3><ul class="space-y-3 text-base"><li><a href="index.html" class="hover:text-white transition-colors">Home</a></li><li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li><li><a href="shop.html" class="hover:text-white transition-colors">Shop</a></li><li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li><li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li></ul></div><div class="footer-section"><h3 class="text-lg font-semibold text-white mb-4">Legal</h3><ul class="space-y-3 text-base"><li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li><li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li></ul></div><div class="footer-section"><h3 class="text-lg font-semibold text-white mb-4">Get In Touch</h3><address class="text-base not-italic"><p class="mt-2"><i class="fas fa-envelope mr-2"></i><a href="mailto:hicocarexoular@gmail.com" class="hover:text-white">hicocarexoular@gmail.com</a></p></address></div></div><div class="footer-bottom text-center border-t border-gray-700 pt-8"><p class="text-base">&copy; <span id="current-year"></span> CraftStream. All rights reserved.</p></div></div>
     </footer>
-    <script>
-        (function() { 'use strict';
-            document.addEventListener('DOMContentLoaded', () => new WebsiteApp());
-            window.addEventListener('load', () => { setTimeout(() => { document.body.classList.add('loaded'); }, 100); });
-            class WebsiteApp { constructor() { this.initializeComponents(); } initializeComponents() { new HeaderScrollBehavior(); new MobileNavigation(); new CurrentYearUpdater(); } }
-            class HeaderScrollBehavior { constructor() { this.header = document.getElementById('main-header'); if (!this.header) return; window.addEventListener('scroll', () => this.header.classList.toggle('scrolled', window.scrollY > 50), { passive: true }); this.header.classList.toggle('scrolled', window.scrollY > 50); } }
-            class MobileNavigation { constructor() { this.toggleButton = document.getElementById('mobile-menu-toggle'); this.overlay = document.getElementById('mobile-nav-overlay'); if (!this.toggleButton || !this.overlay) return; this.navContent = document.getElementById('mobile-nav-content'); this.closeButton = document.getElementById('mobile-menu-close'); this.isOpen = false; this.init(); } init() { this.toggleButton.addEventListener('click', () => this.open()); if (this.closeButton) this.closeButton.addEventListener('click', () => this.close()); this.overlay.addEventListener('click', (e) => { if (e.target === this.overlay) this.close(); }); document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && this.isOpen) this.close(); }); } open() { if (this.isOpen) return; this.isOpen = true; document.body.style.overflow = 'hidden'; this.overlay.classList.remove('invisible', 'opacity-0'); if (this.navContent) this.navContent.classList.remove('translate-x-full'); } close() { if (!this.isOpen) return; this.isOpen = false; document.body.style.overflow = ''; this.overlay.classList.add('opacity-0'); if (this.navContent) this.navContent.classList.add('translate-x-full'); setTimeout(() => this.overlay.classList.add('invisible'), 300); } }
-            class CurrentYearUpdater { constructor() { const yearSpan = document.getElementById('current-year'); if (yearSpan) yearSpan.textContent = new Date().getFullYear(); } }
-        })();
-    </script>
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>
